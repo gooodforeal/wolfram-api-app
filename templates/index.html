@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wolfram Alpha API</title>
+</head>
+<body>
+  <h1>Wolfram Alpha API</h1>
+  <form method="POST" action="/">
+    <label for="query">Запрос:</label>
+    <input type="text" id="query" name="query" value="">
+    <button type="submit">Отправить</button>
+  </form>
+  {% if result %}
+    <p>Результат: {{ result }}</p>
+  {% elif error %}
+    <p>Ошибка: {{ error }}</p>
+  {% endif %}
+</body>
+</html>
